@@ -1,9 +1,11 @@
 package edu.wpi.first;
 
+import groovy.transform.CompileStatic
 import edu.wpi.first.maven.MetaDataFixer;
 
 import java.io.Console;
 
+@CompileStatic
 public class Program {
     public static void main(String[] args) {
         boolean waitForExit = true;
