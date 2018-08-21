@@ -1,0 +1,36 @@
+plugins {
+    id 'groovy'
+    id 'idea'
+    id 'application'
+    id "com.github.johnrengelman.shadow" version "2.0.4"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-xml:2.4.10'
+}
+
+mainClassName = 'edu.wpi.first.Program'
+
+compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+compileGroovy {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+wrapper {
+    gradleVersion = '4.9'
+}
+
+shadowJar {
+    baseName = 'MavenMetaDataFixer'
+    classifier = null
+    version = null
+}
